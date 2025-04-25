@@ -1,6 +1,6 @@
 (async () => {
   try {
-    const response = await fetch("http://localhost:3015/");
+    const response = await fetch("https://bd-reminder-server-production.up.railway.app/");
     const responseJson = await response.json();
 
     const personsTable = document.getElementById("tbody");
@@ -42,7 +42,7 @@ const submit = async () => {
   const prompt = document.getElementById("chat-gpt-prompt");
 
   try {
-    const response = await fetch("http://localhost:3015/birthday", {
+    const response = await fetch("https://bd-reminder-server-production.up.railway.app/birthday", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
